@@ -7,14 +7,59 @@
 //
 
 import UIKit
+import SpriteKit
 
 class ViewController: UIViewController {
-
-    override func viewDidLoad() {
+    
+    var skView: SKView!
+    
+    var button = UIButton(frame: CGRect(x: 100, y:100, width: 100, height: 30))
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let connectionBtn = button
+        connectionBtn.backgroundColor = UIColor.lightGray
+        connectionBtn.setTitle("Connect", for: .normal)
+        connectionBtn.addTarget(self, action: #selector(connectionBtnListener), for: .touchUpInside)
+        self.view.addSubview(connectionBtn)
     }
-
-
+    
+    @IBAction func FadeIn(_ element: UIView)
+    {
+        UIView.animate(withDuration: 2.0, animations: {
+            element.alpha = 1.0;
+        })
+        {(finished) in}
+    }
+    
+    @IBAction func FadeOut(_ element: UIView)
+    {
+        UIView.animate(withDuration: 2.0, animations: {
+            element.alpha = 0.0
+        })
+        {(finished) in}
+    }
+    
+    var toggle = false;
+    @objc private func connectionBtnListener(_ sender: UIButton!)
+    {
+        print("Button Been Touched")
+        if(toggle)
+        {
+            FadeIn(sender)
+        }
+        else
+        {
+            FadeOut(sender)
+        }
+        toggle = !toggle
+    }
+    
+    func setupScene()
+    {
+        
+    }
 }
 
