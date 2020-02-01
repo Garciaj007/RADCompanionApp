@@ -16,7 +16,25 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="SKView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackgroundA" translatesAutoresizingMaskIntoConstraints="NO" id="tgf-rE-TA9">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackgroundOverlayA" translatesAutoresizingMaskIntoConstraints="NO" id="m6B-C4-hot">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="tgf-rE-TA9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Cm7-rB-GXU"/>
+                            <constraint firstItem="tgf-rE-TA9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="UlN-Kr-Z0i"/>
+                            <constraint firstItem="m6B-C4-hot" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="YVM-C3-0DK"/>
+                            <constraint firstItem="tgf-rE-TA9" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="j6y-Ne-A6T"/>
+                            <constraint firstItem="tgf-rE-TA9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lwD-Cl-h8c"/>
+                            <constraint firstItem="m6B-C4-hot" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="q3B-yN-3d6"/>
+                            <constraint firstItem="m6B-C4-hot" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="se2-dY-NRB"/>
+                            <constraint firstItem="m6B-C4-hot" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vL3-gl-0PG"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -24,4 +42,8 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="BackgroundA" width="720" height="1280"/>
+        <image name="BackgroundOverlayA" width="720" height="1280"/>
+    </resources>
 </document>
