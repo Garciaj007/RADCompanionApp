@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B35452623E94D35006EAEDD /* InputManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B35452523E94D35006EAEDD /* InputManager.swift */; };
+		3B35452823E95CA1006EAEDD /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B35452723E95CA1006EAEDD /* NetworkManager.swift */; };
 		3BEB26A923E375FE0077DA95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEB26A823E375FE0077DA95 /* AppDelegate.swift */; };
 		3BEB26AB23E375FE0077DA95 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEB26AA23E375FE0077DA95 /* ViewController.swift */; };
 		3BEB26AE23E375FE0077DA95 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BEB26AC23E375FE0077DA95 /* Main.storyboard */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B35452523E94D35006EAEDD /* InputManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputManager.swift; sourceTree = "<group>"; };
+		3B35452723E95CA1006EAEDD /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		3BEB26A523E375FE0077DA95 /* RADCompanionApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RADCompanionApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BEB26A823E375FE0077DA95 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BEB26AA23E375FE0077DA95 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +64,8 @@
 				3BEB26AF23E375FF0077DA95 /* Assets.xcassets */,
 				3BEB26B123E375FF0077DA95 /* LaunchScreen.storyboard */,
 				3BEB26B423E375FF0077DA95 /* Info.plist */,
+				3B35452523E94D35006EAEDD /* InputManager.swift */,
+				3B35452723E95CA1006EAEDD /* NetworkManager.swift */,
 			);
 			path = RADCompanionApp;
 			sourceTree = "<group>";
@@ -135,6 +141,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B35452823E95CA1006EAEDD /* NetworkManager.swift in Sources */,
+				3B35452623E94D35006EAEDD /* InputManager.swift in Sources */,
 				3BEB26AB23E375FE0077DA95 /* ViewController.swift in Sources */,
 				3BEB26A923E375FE0077DA95 /* AppDelegate.swift in Sources */,
 			);
