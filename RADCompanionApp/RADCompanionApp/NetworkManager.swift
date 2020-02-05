@@ -13,9 +13,14 @@ class NetworkManager
 {
     var connection: NWConnection?
     
+    init(ip4 host: NWEndpoint.Host, port: NWEndpoint.Port)
+    {
+        connectUDP(ip4: host, port)
+    }
+    
     func connectUDP(ip4 host: NWEndpoint.Host, _ port: NWEndpoint.Port)
     {
-        self.connection = NWConnection(host: host, port: port, using: .tcp)
+        self.connection = NWConnection(host: host, port: port, using: .udp)
         
         self.connection?.stateUpdateHandler = { (state) in
             switch state {
