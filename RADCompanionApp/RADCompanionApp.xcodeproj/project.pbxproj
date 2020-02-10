@@ -3,10 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		358A6980B55CCC0B578D99C8 /* Pods_RADCompanionApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F8E4186D50916F7123CA7C /* Pods_RADCompanionApp.framework */; };
+		3B3046B023F12A3F0006AF3D /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3046AF23F12A3F0006AF3D /* InitialViewController.swift */; };
+		3B3046B223F12AC80006AF3D /* VRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3046B123F12AC80006AF3D /* VRViewController.swift */; };
+		3B3046B423F12B0D0006AF3D /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3046B323F12B0D0006AF3D /* MenuViewController.swift */; };
 		3B35452623E94D35006EAEDD /* InputManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B35452523E94D35006EAEDD /* InputManager.swift */; };
 		3B35452823E95CA1006EAEDD /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B35452723E95CA1006EAEDD /* NetworkManager.swift */; };
 		3BEB26A923E375FE0077DA95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEB26A823E375FE0077DA95 /* AppDelegate.swift */; };
@@ -17,6 +21,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C5ECD9E4950EAF72F664443 /* Pods-RADCompanionApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RADCompanionApp.release.xcconfig"; path = "Target Support Files/Pods-RADCompanionApp/Pods-RADCompanionApp.release.xcconfig"; sourceTree = "<group>"; };
+		3B3046AF23F12A3F0006AF3D /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
+		3B3046B123F12AC80006AF3D /* VRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VRViewController.swift; sourceTree = "<group>"; };
+		3B3046B323F12B0D0006AF3D /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		3B35452523E94D35006EAEDD /* InputManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputManager.swift; sourceTree = "<group>"; };
 		3B35452723E95CA1006EAEDD /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		3BEB26A523E375FE0077DA95 /* RADCompanionApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RADCompanionApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -26,6 +34,8 @@
 		3BEB26AF23E375FF0077DA95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3BEB26B223E375FF0077DA95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3BEB26B423E375FF0077DA95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		41E5323EBFAADFD3CA8B2DC8 /* Pods-RADCompanionApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RADCompanionApp.debug.xcconfig"; path = "Target Support Files/Pods-RADCompanionApp/Pods-RADCompanionApp.debug.xcconfig"; sourceTree = "<group>"; };
+		74F8E4186D50916F7123CA7C /* Pods_RADCompanionApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RADCompanionApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +43,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				358A6980B55CCC0B578D99C8 /* Pods_RADCompanionApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E642CF96C220076EDE35654 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				74F8E4186D50916F7123CA7C /* Pods_RADCompanionApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3BEB269C23E375FE0077DA95 = {
 			isa = PBXGroup;
 			children = (
 				3BEB26A723E375FE0077DA95 /* RADCompanionApp */,
 				3BEB26A623E375FE0077DA95 /* Products */,
+				89F2D2E7F575ED932B55E62B /* Pods */,
+				0E642CF96C220076EDE35654 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,8 +87,20 @@
 				3BEB26B423E375FF0077DA95 /* Info.plist */,
 				3B35452523E94D35006EAEDD /* InputManager.swift */,
 				3B35452723E95CA1006EAEDD /* NetworkManager.swift */,
+				3B3046AF23F12A3F0006AF3D /* InitialViewController.swift */,
+				3B3046B123F12AC80006AF3D /* VRViewController.swift */,
+				3B3046B323F12B0D0006AF3D /* MenuViewController.swift */,
 			);
 			path = RADCompanionApp;
+			sourceTree = "<group>";
+		};
+		89F2D2E7F575ED932B55E62B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				41E5323EBFAADFD3CA8B2DC8 /* Pods-RADCompanionApp.debug.xcconfig */,
+				0C5ECD9E4950EAF72F664443 /* Pods-RADCompanionApp.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,9 +110,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3BEB26B723E375FF0077DA95 /* Build configuration list for PBXNativeTarget "RADCompanionApp" */;
 			buildPhases = (
+				5C4E749C460B25FC7028FA36 /* [CP] Check Pods Manifest.lock */,
 				3BEB26A123E375FE0077DA95 /* Sources */,
 				3BEB26A223E375FE0077DA95 /* Frameworks */,
 				3BEB26A323E375FE0077DA95 /* Resources */,
+				38DA22F72F1703DEDA7C2798 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -136,12 +171,57 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		38DA22F72F1703DEDA7C2798 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RADCompanionApp/Pods-RADCompanionApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RADCompanionApp/Pods-RADCompanionApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RADCompanionApp/Pods-RADCompanionApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5C4E749C460B25FC7028FA36 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RADCompanionApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3BEB26A123E375FE0077DA95 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B3046B023F12A3F0006AF3D /* InitialViewController.swift in Sources */,
 				3B35452823E95CA1006EAEDD /* NetworkManager.swift in Sources */,
+				3B3046B223F12AC80006AF3D /* VRViewController.swift in Sources */,
+				3B3046B423F12B0D0006AF3D /* MenuViewController.swift in Sources */,
 				3B35452623E94D35006EAEDD /* InputManager.swift in Sources */,
 				3BEB26AB23E375FE0077DA95 /* ViewController.swift in Sources */,
 				3BEB26A923E375FE0077DA95 /* AppDelegate.swift in Sources */,
@@ -288,6 +368,7 @@
 		};
 		3BEB26B823E375FF0077DA95 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41E5323EBFAADFD3CA8B2DC8 /* Pods-RADCompanionApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -306,6 +387,7 @@
 		};
 		3BEB26B923E375FF0077DA95 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C5ECD9E4950EAF72F664443 /* Pods-RADCompanionApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

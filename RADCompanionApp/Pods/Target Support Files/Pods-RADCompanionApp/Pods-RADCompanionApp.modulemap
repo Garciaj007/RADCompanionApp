@@ -1,0 +1,6 @@
+framework module Pods_RADCompanionApp {
+  umbrella header "Pods-RADCompanionApp-umbrella.h"
+
+  export *
+  module * { export * }
+}

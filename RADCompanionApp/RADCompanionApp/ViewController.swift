@@ -1,8 +1,9 @@
 //
+//  DELETE ME!
 //  ViewController.swift
 //  RADCompanionApp
 //
-//  Created by Beyond Help on 2020-01-30.
+//  Created by Juriel Garcia on 2020-01-30.
 //  Copyright © 2020 Personal. All rights reserved.
 //
 

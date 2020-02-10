@@ -2,7 +2,7 @@
 //  NetworkManager.swift
 //  RADCompanionApp
 //
-//  Created by Beyond Help on 2020-02-04.
+//  Created by Juriel Garcia on 2020-02-04.
 //  Copyright © 2020 Personal. All rights reserved.
 //
 
@@ -22,7 +22,7 @@ class NetworkManager
     {
         self.connection = NWConnection(host: host, port: port, using: .udp)
         
-        self.connection?.stateUpdateHandler = { (state) in
+        self.connection!.stateUpdateHandler = { (state) in
             switch state {
             case .ready:
                 print("Ready...")
@@ -31,13 +31,16 @@ class NetworkManager
                 print(response)
                 break
             case .setup:
+                print("Setting up...")
                 break
             case .cancelled:
+                print("Cancelled...")
                 break
             case .preparing:
+                print("Preparing")
                 break
             default:
-                print("Error: State Not Defined!\n")
+                print(".")
             }
         }
     }
