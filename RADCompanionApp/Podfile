@@ -4,5 +4,4 @@ platform :ios, '12.0'
 pod 'SnapKit', '~> 4.0'
 pod 'IBAnimatable', '~> 5.2'
 pod 'Hero'
-pod 'SwiftSocket'
 end

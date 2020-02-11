@@ -21,11 +21,14 @@ class InitialViewController : UIViewController
         
         //  Change Properties
         ipTextfield.placeholder = "127.0.0.1"
-        ipTextfield.textAlignment = .justified
-        ipTextfield.borderStyle = .none
+        ipTextfield.textAlignment = .center
+        ipTextfield.borderStyle = .line
         ipTextfield.clearButtonMode = .never
         ipTextfield.keyboardType = .numbersAndPunctuation
         ipTextfield.keyboardAppearance = .dark
+        ipTextfield.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        ipTextfield.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.8)
+        //ipTextfield.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.6)
         
         //  Add to View
         self.view.addSubview(box)
@@ -38,6 +41,8 @@ class InitialViewController : UIViewController
         ipTextfield.snp.makeConstraints({ (make) -> Void in
             make.centerX.equalToSuperview()
             make.centerY.equalToSuperview().offset(-20)
+            make.width.equalToSuperview().offset(-40)
+            make.height.equalToSuperview().dividedBy(16)
         })
     }
 }

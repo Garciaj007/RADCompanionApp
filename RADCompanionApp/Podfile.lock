@@ -2,27 +2,23 @@ PODS:
   - Hero (1.5.0)
   - IBAnimatable (5.2.1)
   - SnapKit (4.2.0)
-  - SwiftSocket (2.0.2)
 
 DEPENDENCIES:
   - Hero
   - IBAnimatable (~> 5.2)
   - SnapKit (~> 4.0)
-  - SwiftSocket
 
 SPEC REPOS:
   trunk:
     - Hero
     - IBAnimatable
     - SnapKit
-    - SwiftSocket
 
 SPEC CHECKSUMS:
   Hero: b7385b75e7259da62f4f85462f59a5082d66b058
   IBAnimatable: a46b835ec6875178516cf7e014a40194d6bfa3fc
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
-  SwiftSocket: 6f4c9c63fbc5c1d61188936bb3c599fd546f40ae
 
-PODFILE CHECKSUM: 55fbf5d392983540c8d02c096c3d3f78343f609d
+PODFILE CHECKSUM: 94d64fc40538d339d5b596c2b0944421f54d8cc4
 
 COCOAPODS: 1.8.4
