@@ -17,6 +17,7 @@
 		3BEB26AE23E375FE0077DA95 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BEB26AC23E375FE0077DA95 /* Main.storyboard */; };
 		3BEB26B023E375FF0077DA95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BEB26AF23E375FF0077DA95 /* Assets.xcassets */; };
 		3BEB26B323E375FF0077DA95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BEB26B123E375FF0077DA95 /* LaunchScreen.storyboard */; };
+		AB59BFF023F3805000B73522 /* UIImageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB59BFEF23F3805000B73522 /* UIImageHandler.swift */; };
 		D5D25C2D1759FA6670A10EC2 /* Pods_RADCompanionApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31B4240F63D817CE77DABF7B /* Pods_RADCompanionApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,7 @@
 		3BEB26B423E375FF0077DA95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E7820A92F08219CE24E920A /* Pods-RADCompanionApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RADCompanionApp.debug.xcconfig"; path = "Target Support Files/Pods-RADCompanionApp/Pods-RADCompanionApp.debug.xcconfig"; sourceTree = "<group>"; };
 		93A8BD0AE8D50FBED1A6E674 /* Pods-RADCompanionApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RADCompanionApp.release.xcconfig"; path = "Target Support Files/Pods-RADCompanionApp/Pods-RADCompanionApp.release.xcconfig"; sourceTree = "<group>"; };
+		AB59BFEF23F3805000B73522 /* UIImageHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				3B3046AF23F12A3F0006AF3D /* InitialViewController.swift */,
 				3B3046B123F12AC80006AF3D /* VRViewController.swift */,
 				3B3046B323F12B0D0006AF3D /* MenuViewController.swift */,
+				AB59BFEF23F3805000B73522 /* UIImageHandler.swift */,
 			);
 			path = RADCompanionApp;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 				3B3046B423F12B0D0006AF3D /* MenuViewController.swift in Sources */,
 				3B35452623E94D35006EAEDD /* InputManager.swift in Sources */,
 				3BEB26AB23E375FE0077DA95 /* ViewController.swift in Sources */,
+				AB59BFF023F3805000B73522 /* UIImageHandler.swift in Sources */,
 				3BEB26A923E375FE0077DA95 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

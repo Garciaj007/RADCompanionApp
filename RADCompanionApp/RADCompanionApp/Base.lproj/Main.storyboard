@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,33 +12,16 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" userLabel="ConnectionScene" customClass="InitialViewController" customModule="RADCompanionApp" customModuleProvider="target" colorLabel="IBBuiltInLabel-Green" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="SKView">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackgroundA" translatesAutoresizingMaskIntoConstraints="NO" id="tgf-rE-TA9">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackgroundOverlayA" translatesAutoresizingMaskIntoConstraints="NO" id="m6B-C4-hot">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </imageView>
-                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="tgf-rE-TA9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Cm7-rB-GXU"/>
-                            <constraint firstItem="tgf-rE-TA9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="UlN-Kr-Z0i"/>
-                            <constraint firstItem="m6B-C4-hot" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="YVM-C3-0DK"/>
-                            <constraint firstItem="tgf-rE-TA9" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="j6y-Ne-A6T"/>
-                            <constraint firstItem="tgf-rE-TA9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lwD-Cl-h8c"/>
-                            <constraint firstItem="m6B-C4-hot" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="q3B-yN-3d6"/>
-                            <constraint firstItem="m6B-C4-hot" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="se2-dY-NRB"/>
-                            <constraint firstItem="m6B-C4-hot" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vL3-gl-0PG"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="30" y="133"/>
         </scene>
         <!--VRScene-->
         <scene sceneID="YR9-G7-46H">
@@ -54,6 +36,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PHS-uZ-34L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1058" y="133"/>
         </scene>
         <!--MenuScene-->
         <scene sceneID="zQW-mZ-Cw7">
@@ -68,6 +51,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wvj-Hl-BL0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="943" y="241"/>
         </scene>
         <!--ToolScene-->
         <scene sceneID="BoI-3c-Fdp">
@@ -91,10 +75,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HGC-DC-uSf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="671" y="133"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="BackgroundA" width="720" height="1280"/>
-        <image name="BackgroundOverlayA" width="720" height="1280"/>
-    </resources>
 </document>
