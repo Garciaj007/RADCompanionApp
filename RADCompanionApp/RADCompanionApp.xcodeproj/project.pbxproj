@@ -12,6 +12,8 @@
 		3B3046B423F12B0D0006AF3D /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3046B323F12B0D0006AF3D /* MenuViewController.swift */; };
 		3B35452623E94D35006EAEDD /* InputManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B35452523E94D35006EAEDD /* InputManager.swift */; };
 		3B35452823E95CA1006EAEDD /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B35452723E95CA1006EAEDD /* NetworkManager.swift */; };
+		3B81E8B123F462D500859513 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B81E8B023F462D500859513 /* Constants.swift */; };
+		3B98FF3B23F4D1B0006E25BD /* BackgroundGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B98FF3A23F4D1B0006E25BD /* BackgroundGradient.swift */; };
 		3BEB26A923E375FE0077DA95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEB26A823E375FE0077DA95 /* AppDelegate.swift */; };
 		3BEB26AB23E375FE0077DA95 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEB26AA23E375FE0077DA95 /* ViewController.swift */; };
 		3BEB26AE23E375FE0077DA95 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BEB26AC23E375FE0077DA95 /* Main.storyboard */; };
@@ -28,6 +30,8 @@
 		3B3046B323F12B0D0006AF3D /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		3B35452523E94D35006EAEDD /* InputManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputManager.swift; sourceTree = "<group>"; };
 		3B35452723E95CA1006EAEDD /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		3B81E8B023F462D500859513 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		3B98FF3A23F4D1B0006E25BD /* BackgroundGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundGradient.swift; sourceTree = "<group>"; };
 		3BEB26A523E375FE0077DA95 /* RADCompanionApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RADCompanionApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BEB26A823E375FE0077DA95 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BEB26AA23E375FE0077DA95 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +97,8 @@
 				3B3046B123F12AC80006AF3D /* VRViewController.swift */,
 				3B3046B323F12B0D0006AF3D /* MenuViewController.swift */,
 				AB59BFEF23F3805000B73522 /* UIImageHandler.swift */,
+				3B81E8B023F462D500859513 /* Constants.swift */,
+				3B98FF3A23F4D1B0006E25BD /* BackgroundGradient.swift */,
 			);
 			path = RADCompanionApp;
 			sourceTree = "<group>";
@@ -229,6 +235,8 @@
 				3BEB26AB23E375FE0077DA95 /* ViewController.swift in Sources */,
 				AB59BFF023F3805000B73522 /* UIImageHandler.swift in Sources */,
 				3BEB26A923E375FE0077DA95 /* AppDelegate.swift in Sources */,
+				3B81E8B123F462D500859513 /* Constants.swift in Sources */,
+				3B98FF3B23F4D1B0006E25BD /* BackgroundGradient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

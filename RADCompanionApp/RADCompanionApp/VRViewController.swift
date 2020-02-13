@@ -11,5 +11,26 @@ import SnapKit
 
 class VRViewController : UIViewController
 {
+    var timer:Timer?
+    var background: UIGradient?
+    var backgroundOverlay: UIGradient?
     
+    var time = 0.0
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        background = UIGradient()
+        backgroundOverlay = UIGradient()
+        
+        view.addSubview(background!)
+        view.addSubview(backgroundOverlay!)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        backgroundOverlay!.SetSize(view.bounds)
+        backgroundOverlay!.SetSize(view.bounds)
+    }
 }

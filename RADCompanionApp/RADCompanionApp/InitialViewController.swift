@@ -13,25 +13,19 @@ import SnapKit
 class InitialViewController : UIViewController
 {
     var timer:Timer?
-    
-    //var background: UIImageView?
-    var background: UIView?
-    var backgroundOverlay: UIImageView?
-    
-    var gradient: CAGradientLayer?
-    
+    var background: UIGradient?
+
     var time = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad();
         
         //  Declare Objects
-        let box = UIView()
+        background = UIGradient(primaryDark, primaryLight)
+        let header = UILabel()
+        let description = UILabel()
+        let connectBtn = UIButton(type: .roundedRect)
         let ipTextfield = UITextField()
-        
-        background = UIView()
-        //background = UIImageView(image: #imageLiteral(resourceName: "BackgroundA"))
-        backgroundOverlay = UIImageView(image: #imageLiteral(resourceName: "BackgroundOverlayA"))
         
         //  Change Properties
         ipTextfield.placeholder = "127.0.0.1"
@@ -42,59 +36,81 @@ class InitialViewController : UIViewController
         ipTextfield.keyboardAppearance = .dark
         ipTextfield.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         ipTextfield.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.8)
-        //ipTextfield.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.6)
+
+        header.text = "Connect"
+        header.textAlignment = .center
+        description.text = "Enter IP to Connect"
+        description.textAlignment = .center
         
-        //background?.contentMode = .scaleToFill
-        //background?.image?.withRenderingMode(.alwaysTemplate)
-        
-        gradient = CAGradientLayer()
-        gradient!.frame = view.bounds;
-        
-        backgroundOverlay?.contentMode = .scaleToFill
-        
-        view.layer.insertSublayer(gradient!, at: 0)
+        connectBtn.setTitle("Connect", for: .normal)
         
         //  Add to View
-        self.view.addSubview(background!)
-        self.view.addSubview(backgroundOverlay!)
-        self.view.addSubview(box)
-        self.view.addSubview(ipTextfield)
+        view.addSubview(background!)
+        view.addSubview(header)
+        view.addSubview(description)
+        view.addSubview(ipTextfield)
+        view.addSubview(connectBtn)
         
         //  Set Constraints
-        background?.snp.makeConstraints({ (make) -> Void in
-            make.edges.equalToSuperview()
+        header.snp.makeConstraints({ (make) -> Void in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(100)
+            make.width.equalToSuperview()
+            make.height.equalToSuperview().dividedBy(16)
         })
         
-        backgroundOverlay?.snp.makeConstraints({ (make) -> Void in
-            make.edges.equalToSuperview()
-        })
-        
-        box.snp.makeConstraints({ (make) -> Void in
-            make.edges.equalToSuperview().inset(UIEdgeInsets(top: 20, left: 20, bottom: 20, right:20))
+        description.snp.makeConstraints({ (make) -> Void in
+            make.centerX.equalToSuperview()
+            make.bottom.equalTo(ipTextfield.snp.top).offset(-50)
+            make.width.equalToSuperview()
+            make.height.equalToSuperview().dividedBy(20)
         })
         
         ipTextfield.snp.makeConstraints({ (make) -> Void in
             make.centerX.equalToSuperview()
             make.centerY.equalToSuperview().offset(-20)
             make.width.equalToSuperview().offset(-40)
+            make.height.equalToSuperview().dividedBy(14)
+        })
+        
+        connectBtn.snp.makeConstraints({ (make) -> Void in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(ipTextfield.snp.bottom).offset(50)
+            make.width.equalToSuperview()
             make.height.equalToSuperview().dividedBy(16)
         })
         
+        //  Update Timer
         timer = Timer.scheduledTimer(timeInterval: TimeInterval(1.0 / 60.0), target: self, selector: #selector(Update), userInfo: nil, repeats: true)
+    }
+    
+    //Function Used To Set Position of Subviews Parallel to View
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        background!.SetSize(view.bounds)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         timer?.invalidate()
     }
     
+    // [Deprecated]
     @objc func Update(_ timer:Timer)
     {
         time += timer.timeInterval as Double
-        //background?.tintColor = UIColor(hue: CGFloat(sin(time) * 0.5 + 0.5) , saturation: 0.8, brightness: 0.8, alpha: 1.0)
-        //backgroundOverlay?.alpha = CGFloat(sin(time) * 0.5 + 0.5)
-        gradient?.colors = [UIColor.cyan.cgColor, UIColor.magenta.cgColor]
-        gradient?.transform = CATransform3DMakeRotation(CGFloat.pi / CGFloat(sin(time) + 1), 0, 0, 1)
-        
-        backgroundOverlay?.alpha = 0;
+    }
+}
+
+class MakeAnim
+{
+    static func MakeGradientColorAnim(colors: [CGColor]) -> CAAnimation
+    {
+        let anim = CABasicAnimation(keyPath: "colors")
+        anim.toValue = colors
+        anim.duration = 20
+        anim.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
+        anim.autoreverses = true;
+        anim.repeatCount = Float.infinity
+        return anim;
     }
 }
