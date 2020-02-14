@@ -9,6 +9,7 @@
 
 import UIKit
 import SnapKit
+import IBAnimatable
 
 class InitialViewController : UIViewController
 {
@@ -24,6 +25,7 @@ class InitialViewController : UIViewController
         background = UIGradient(primaryDark, primaryLight)
         let header = UILabel()
         let description = UILabel()
+        let connectABtn = AnimatableButton()
         let connectBtn = UIButton(type: .roundedRect)
         let ipTextfield = UITextField()
         
@@ -43,6 +45,14 @@ class InitialViewController : UIViewController
         description.textAlignment = .center
         
         connectBtn.setTitle("Connect", for: .normal)
+        connectBtn.addTarget(self, action: #selector(ConnectButtonPressed), for: .touchUpInside)
+        
+        connectABtn.setTitle("Connect", for: .normal)
+        connectABtn.ib.borderWidth = 50
+        connectABtn.backgroundColor = .systemBlue
+        connectABtn.ib.shadowColor = .black
+        connectABtn.ib.shadowOpacity = 1
+        connectABtn.shadowRadius = 25
         
         //  Add to View
         view.addSubview(background!)
@@ -50,6 +60,7 @@ class InitialViewController : UIViewController
         view.addSubview(description)
         view.addSubview(ipTextfield)
         view.addSubview(connectBtn)
+        view.addSubview(connectABtn)
         
         //  Set Constraints
         header.snp.makeConstraints({ (make) -> Void in
@@ -73,12 +84,29 @@ class InitialViewController : UIViewController
             make.height.equalToSuperview().dividedBy(14)
         })
         
+        connectABtn.snp.makeConstraints({ (make) -> Void in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(ipTextfield.snp.bottom).offset(100)
+            make.width.equalToSuperview()
+            make.height.equalToSuperview().dividedBy(16)
+        })
+        
         connectBtn.snp.makeConstraints({ (make) -> Void in
             make.centerX.equalToSuperview()
             make.top.equalTo(ipTextfield.snp.bottom).offset(50)
             make.width.equalToSuperview()
             make.height.equalToSuperview().dividedBy(16)
         })
+        
+        //  Start Input Manager
+        if(!InputManager.Get().startDeviceMotion())
+        {
+            //  Display Error Message To User
+            print("Core Motion Not Found")
+        }
+        
+        //Network Manager
+        UDPNetworkManager.Get().send(text: "PLEASE FUCKING WORK", host: "172.20.10.2", port: 54000)
         
         //  Update Timer
         timer = Timer.scheduledTimer(timeInterval: TimeInterval(1.0 / 60.0), target: self, selector: #selector(Update), userInfo: nil, repeats: true)
@@ -98,6 +126,11 @@ class InitialViewController : UIViewController
     @objc func Update(_ timer:Timer)
     {
         time += timer.timeInterval as Double
+    }
+    
+    @objc func ConnectButtonPressed()
+    {
+        performSegue(withIdentifier: "Connect2Menu", sender: nil)
     }
 }
 

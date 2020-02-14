@@ -7,12 +7,24 @@
 //
 
 import CoreMotion
-import Foundation
 
 class InputManager
 {
+    private static var inputManager:InputManager?
+    
     var motionManager = CMMotionManager()
     var timer = Timer()
+    
+    private init(){}
+    
+    static func Get() -> InputManager
+    {
+        if(inputManager == nil)
+        {
+            inputManager = InputManager()
+        }
+        return inputManager!
+    }
     
     //This function is called when callibrating.
     func startDeviceMotion() -> Bool
@@ -27,7 +39,7 @@ class InputManager
         self.motionManager.startDeviceMotionUpdates(using: .xArbitraryZVertical)
         
         //Setting timer to fetch motion data
-        timer = Timer(fire:Date(), interval: (1.0 / 90.0), repeats: true, block: { (timer) in
+        timer = Timer.scheduledTimer(withTimeInterval: (1.0 / 90.0), repeats: true, block: { (timer) in
             if let data = self.motionManager.deviceMotion {
                 
                 //Get Device Orientation
@@ -36,6 +48,9 @@ class InputManager
                 
                 //Get Device Acceleration
                 let acceleration = data.userAcceleration;
+                
+                //print("Orientation: \(orientation)")
+                //print("Acceleration: \(acceleration)")
             
                 //Send Data via Network Manager
                 

@@ -7,78 +7,54 @@
 //
 
 import Foundation
-import Network
 
-class NetworkManager
+class UDPNetworkManager
 {
-    var connection: NWConnection?
+    static var networkManager: UDPNetworkManager?
     
-    init(ip4 host: NWEndpoint.Host, port: NWEndpoint.Port)
-    {
-        connectUDP(ip4: host, port)
-    }
+    private init(){}
     
-    func connectUDP(ip4 host: NWEndpoint.Host, _ port: NWEndpoint.Port)
+    func send(text: String, host: String, port: CUnsignedShort)
     {
-        self.connection = NWConnection(host: host, port: port, using: .udp)
+        let sock = socket(AF_INET, SOCK_DGRAM, 0)
         
-        self.connection!.stateUpdateHandler = { (state) in
-            switch state {
-            case .ready:
-                print("Ready...")
-                self.sendUDP("This is Some Message")
-                let response = String(decoding:(self.recieveUDP()!), as: UTF8.self)
-                print(response)
-                break
-            case .setup:
-                print("Setting up...")
-                break
-            case .cancelled:
-                print("Cancelled...")
-                break
-            case .preparing:
-                print("Preparing")
-                break
-            default:
-                print(".")
+        var addr = sockaddr_in()
+        addr.sin_len = __uint8_t(MemoryLayout<sockaddr_in>.size)
+        addr.sin_family = sa_family_t(AF_INET)
+        addr.sin_port = htons(port)
+        inet_pton(AF_INET, host, &addr.sin_addr)
+        
+        let result = text.withCString { str -> Int in
+            var tempAddr = addr
+            let result = withUnsafePointer(to: &tempAddr) { ptr -> Int in
+                let mem = UnsafeRawPointer(ptr).bindMemory(to: sockaddr.self, capacity: 1)
+                let sent = sendto(sock, str, strlen(str), 0, mem, socklen_t(addr.sin_len))
+                return sent
             }
+            return result
         }
-    }
-    
-    func sendUDP(_ content:Data)
-    {
-        self.connection?.send(content: content, completion: NWConnection.SendCompletion.contentProcessed(({ (NWError) in
-            if(NWError == nil)
-            {
-                print("Data sent!")
-            }
-            else
-            {
-                print("Error: Data Not Sent!\tNWError: \(NWError!)")
-            }
-            
-        })))
-    }
-    
-    func sendUDP(_ content:String)
-    {
-        let data = content.data(using: .ascii)
-        sendUDP(data!);
-    }
-    
-    func recieveUDP() -> Data?
-    {
-        var recievedData: Data?;
-        self.connection?.receiveMessage{ (data, ctx, isComplete, error) in
-            if(isComplete)
-            {
-                print("Data Recieved!")
-                if(data != nil)
-                {
-                    recievedData = data;
-                }
-            }
+        
+        if(result < 0)
+        {
+            print("Error Sending UDP packet")
         }
-        return recievedData;
+        
+        close(sock)
     }
+    
+
+    
+    static func Get() -> UDPNetworkManager
+    {
+        if(networkManager == nil)
+        {
+            networkManager = UDPNetworkManager()
+        }
+        return networkManager!;
+    }
+}
+
+public func htons(_ value: CUnsignedShort) -> CUnsignedShort
+{
+    return (value << 8) + (value >> 8)
 }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -13,69 +13,89 @@
             <objects>
                 <viewController id="BYZ-38-t0r" userLabel="ConnectionScene" customClass="InitialViewController" customModule="RADCompanionApp" customModuleProvider="target" colorLabel="IBBuiltInLabel-Green" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <segue destination="Ege-e1-IL4" kind="show" identifier="Connection2Calibration" id="aki-Uf-aaC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="30" y="133"/>
+            <point key="canvasLocation" x="-895" y="132"/>
         </scene>
         <!--VRScene-->
         <scene sceneID="YR9-G7-46H">
             <objects>
                 <viewController id="fB6-CC-6Gy" userLabel="VRScene" colorLabel="IBBuiltInLabel-Purple" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wAJ-uW-ioK">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="M96-Qt-0CS"/>
                     </view>
+                    <navigationItem key="navigationItem" id="CzD-GL-gAp"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PHS-uZ-34L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1058" y="133"/>
+            <point key="canvasLocation" x="1001" y="-228"/>
         </scene>
         <!--MenuScene-->
         <scene sceneID="zQW-mZ-Cw7">
             <objects>
                 <viewController id="7AX-GY-FYp" userLabel="MenuScene" colorLabel="IBBuiltInLabel-Blue" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ehq-pN-WCg">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="5uC-Oy-3dr"/>
                     </view>
+                    <navigationItem key="navigationItem" id="BWg-kw-BPg"/>
+                    <connections>
+                        <segue destination="14d-3l-oUQ" kind="presentation" identifier="Menu2Tools" id="QG9-KF-qVV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wvj-Hl-BL0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="943" y="241"/>
+            <point key="canvasLocation" x="1001" y="532"/>
         </scene>
         <!--ToolScene-->
         <scene sceneID="BoI-3c-Fdp">
             <objects>
                 <viewController id="14d-3l-oUQ" userLabel="ToolScene" colorLabel="IBBuiltInLabel-Yellow" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ljH-Cw-04z">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LJG-FK-lBS">
-                                <rect key="frame" x="68" y="183" width="48" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="kXg-Lt-hSx"/>
                     </view>
+                    <navigationItem key="navigationItem" id="oBt-Bb-lXY"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HGC-DC-uSf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="671" y="133"/>
+            <point key="canvasLocation" x="1764" y="531"/>
+        </scene>
+        <!--Calibration View Controller-->
+        <scene sceneID="igQ-Ou-Wi0">
+            <objects>
+                <viewController id="Ege-e1-IL4" customClass="CalibrationViewController" customModule="RADCompanionApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EZN-0g-o1C">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="vGq-Gm-TDB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="8Wf-vx-R5A"/>
+                    <connections>
+                        <segue destination="7AX-GY-FYp" kind="presentation" identifier="Calibration2Menu" id="rkv-Xn-XgW"/>
+                        <segue destination="fB6-CC-6Gy" kind="presentation" identifier="Calibration2VR" id="Qpf-V8-rWU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IOq-kV-Klh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-36" y="132"/>
         </scene>
     </scenes>
 </document>

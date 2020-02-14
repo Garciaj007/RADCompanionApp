@@ -13,7 +13,6 @@ import SpriteKit
 class ViewController: UIViewController {
     
     var skView: SKView!
-    var networkManager: NetworkManager?;
     var button = UIButton(frame: CGRect(x: 100, y:100, width: 100, height: 30))
     
     override func viewDidLoad()
@@ -25,8 +24,6 @@ class ViewController: UIViewController {
         connectionBtn.setTitle("Connect", for: .normal)
         connectionBtn.addTarget(self, action: #selector(connectionBtnListener), for: .touchUpInside)
         self.view.addSubview(connectionBtn)
-        
-        networkManager = NetworkManager(ip4: "142.214.241.68", port: 8888)
     }
     
     @IBAction func FadeIn(_ element: UIView)
