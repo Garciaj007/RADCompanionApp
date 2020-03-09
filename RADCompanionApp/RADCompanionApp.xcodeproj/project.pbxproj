@@ -14,6 +14,7 @@
 		3B35452823E95CA1006EAEDD /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B35452723E95CA1006EAEDD /* NetworkManager.swift */; };
 		3B81E8B123F462D500859513 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B81E8B023F462D500859513 /* Constants.swift */; };
 		3B98FF3B23F4D1B0006E25BD /* BackgroundGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B98FF3A23F4D1B0006E25BD /* BackgroundGradient.swift */; };
+		3BC5FD3A2416722C00F3A994 /* ToolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC5FD392416722C00F3A994 /* ToolViewController.swift */; };
 		3BEB26A923E375FE0077DA95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEB26A823E375FE0077DA95 /* AppDelegate.swift */; };
 		3BEB26AE23E375FE0077DA95 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BEB26AC23E375FE0077DA95 /* Main.storyboard */; };
 		3BEB26B023E375FF0077DA95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BEB26AF23E375FF0077DA95 /* Assets.xcassets */; };
@@ -32,6 +33,7 @@
 		3B35452723E95CA1006EAEDD /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		3B81E8B023F462D500859513 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3B98FF3A23F4D1B0006E25BD /* BackgroundGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundGradient.swift; sourceTree = "<group>"; };
+		3BC5FD392416722C00F3A994 /* ToolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolViewController.swift; sourceTree = "<group>"; };
 		3BEB26A523E375FE0077DA95 /* RADCompanionApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RADCompanionApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BEB26A823E375FE0077DA95 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BEB26AD23E375FE0077DA95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				3B81E8B023F462D500859513 /* Constants.swift */,
 				3B98FF3A23F4D1B0006E25BD /* BackgroundGradient.swift */,
 				ABAD80F423F62508004C3F0A /* CalibrationViewController.swift */,
+				3BC5FD392416722C00F3A994 /* ToolViewController.swift */,
 			);
 			path = RADCompanionApp;
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 			files = (
 				3B3046B023F12A3F0006AF3D /* InitialViewController.swift in Sources */,
 				3B35452823E95CA1006EAEDD /* NetworkManager.swift in Sources */,
+				3BC5FD3A2416722C00F3A994 /* ToolViewController.swift in Sources */,
 				3B3046B223F12AC80006AF3D /* VRViewController.swift in Sources */,
 				3B3046B423F12B0D0006AF3D /* MenuViewController.swift in Sources */,
 				3B35452623E94D35006EAEDD /* InputManager.swift in Sources */,

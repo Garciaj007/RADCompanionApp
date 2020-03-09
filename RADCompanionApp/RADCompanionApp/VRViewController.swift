@@ -20,7 +20,7 @@ class VRViewController : UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        background = UIGradient(primaryDark, primaryLight)
+        background = UIGradient([RADColor.secondary.cgColor, RADColor.secondary.lighten(percent: 10).cgColor])
         backgroundOverlay = UIGradient()
         
         view.addSubview(background!)
